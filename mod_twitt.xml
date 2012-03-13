@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Twitt</name>
+	<author>Vivek Anand</author>
+	<creationDate>March</creationDate>
+	<copyright>Copyright (C) vivek. All rights reserved.</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>anand.vivek13@gmail.com</authorEmail>
+	<authorUrl>www.insidevivek.wordpress.com</authorUrl>
+	<version>1.0</version>
+	<description>Module to display tweets</description>
+	<files>
+		<filename module="mod_twitt">mod_twitt.php</filename>
+		<filename module="mod_twitt">helper.php</filename>
+		<filename module="mod_twitt">tmpl/default.php</filename>
+	</files>
+	
+	<params>
+		<param name="twitteruser" type="text" default="" label="Twitter User" description="username" />
+		<param name="twitteritems" type="text" default="5" label="Tweets" description="no of tweet" />
+    
+    <param name="twittitemlink" type="radio" default="1" label="Link to Tweets" description="Link to Twitter ">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+		<param name="twitttitle" type="text" default="" label="Link Text" description="if enabled it will displayed on the link" />    
+    		
+		<param name="@spacer" type="spacer" default="" label="RSS Feed Config" description="used if above selected" />
+
+    <param name="allthese" type="text" size="30" default="" label="All these words" description="search" />
+    <param name="exactphrase" type="text" size="30" default="" label="This exact phrase" description="exact phrase" />
+    <param name="anyofthese" type="text" size="30" default="" label="Any of these words" description="show these words" />
+    <param name="noneofthese" type="text" size="30" default="" label="None of these words" description="show except these words" />
+    <param name="thishashtag" type="text" size="30" default="" label="These Hashtags" description="Only display Tweets with these Hashtags." />    
+    
+    <param name="onlylinks" type="radio" default="0" label="Only Links" description="Only display Tweet updates">
+      <option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>   
+    
+		<param name="followmetext" type="text" size="30" default="Get my Twitt" label="Follow Me Text" description="Follow Me on Twitter" />
+    <param name="word_count" type="text" size="6" default="0" label="Word Count" description="PARAMWORDCOUNT" />		
+			
+		<param name="rsstitle" type="radio" default="0" label="Display Query Link" description="Display the constructed Query.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>		
+		
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />    
+		
+	</params>
+	<params group="advanced">
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="15" label="Cache Time" description="module re-cached time in sec" />
+	</params>
+</install>
